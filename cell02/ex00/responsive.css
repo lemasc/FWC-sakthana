@@ -1,0 +1,26 @@
+body {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.first-cell,
+.second-cell {
+    text-align: left;
+    height: 100px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.first-cell {
+    background-color: #c2d6a1;
+}
+
+.second-cell {
+    background-color: #f4b1a3;
+}
