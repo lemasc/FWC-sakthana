@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+span {
+  font-size: 1.2rem;
+}
+
+.parallax {
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  align-content: center;
+}
+
+.bg-img1 {
+  background-image: url("https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/AAE2/production/_116064734_agnieszka.png.webp");
+  color: white;
+}
+.bg-img2 {
+  background-image: url("https://static.thairath.co.th/media/B6FtNKtgSqRqbnNsbSHAVyO8yvWmFTyGc5hXtSV9GvbVUdH7EHnxkluNocxOr1jko9To7.jpg");
+}
+
+.middle {
+  height: 500px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 100%;
+  align-content: center;
+}
+
+.red-text {
+  color: red;
+}
