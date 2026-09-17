@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explode this Balloon</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      #balloon {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%;
+        transition: width, height 0.3s linear;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="balloon"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        const colors = ["red", "green", "blue"];
+        let colorIndex = 0;
+
+        let currentSize = 200;
+        const maxSize = 420;
+        const minSize = 200;
+
+        const setSize = (newSize) => {
+          if (newSize > maxSize || newSize < minSize) {
+            currentSize = minSize;
+          } else {
+            currentSize = newSize;
+          }
+          $("#balloon").css({
+            width: `${currentSize}px`,
+            height: `${currentSize}px`,
+          });
+        };
+
+        $("#balloon").click(function growBalloon() {
+          setSize(currentSize + 10);
+          colorIndex = (colorIndex + 1) % colors.length;
+          $("#balloon").css("background-color", colors[colorIndex]);
+        });
+
+        $("#balloon").mouseleave(function shrinkBalloon() {
+          setSize(currentSize - 5);
+          colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+          $("#balloon").css("background-color", colors[colorIndex]);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do or Not To Do</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      button {
+        padding-block: 8px;
+        padding-inline: 15px;
+        margin: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f0f0f0;
+        cursor: pointer;
+      }
+      #ft_list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      #ft_list > div {
+        margin: 5px;
+        padding-block: 8px;
+        padding-inline: 15px;
+        border: 0px;
+        border-radius: 5px;
+        background-color: rgb(252, 234, 234);
+        width: 100%;
+        max-width: 300px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        /* .truncate from tailwind */
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      #ft_list > div:hover {
+        background-color: rgb(240, 205, 205);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>To Do List</h1>
+    <button id="newBtn">New</button>
+    <div id="ft_list"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="todo.js"></script>
+  </body>
+</html>
