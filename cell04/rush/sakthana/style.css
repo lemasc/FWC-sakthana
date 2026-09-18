@@ -1,0 +1,12 @@
+body {
+  font-family: Lato, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-image: url("https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/AAE2/production/_116064734_agnieszka.png.webp");
+  background-repeat: no-repeats;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
