@@ -28,10 +28,13 @@
         }
         
         .showcase-item {
-            @apply flex flex-col gap-4;
+            @apply flex flex-col gap-4 p-6;
         }
         .showcase-item p {
             @apply text-neutral-700 text-sm;
+        }
+        .showcase-item img {
+            max-width: min(400px, 80vw);
         }
         
     </style>
@@ -39,21 +42,21 @@
 
 <body>
     <nav
-        class="sticky z-10 top-0 p-8 h-16 flex items-center text-white data-[scrolled=true]:bg-green-800/80 transition-colors duration-500">
+        class="sticky z-10 top-0 p-8 h-24 sm:h-16 flex items-center text-white data-[scrolled=true]:bg-green-800/80 transition-colors duration-500 gap-8">
         <span><b class="text-lg">sakthana</b></span>
-        <div class="flex justify-end flex-grow gap-8">
+        <div class="flex flex-wrap justify-end flex-grow gap-x-8 gap-y-4 text-sm sm:text-base">
             <a href="#top">Home</a>
             <a href="#about">About</a>
             <a href="#showcase">Showcase</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
-    <header id="top" class="-mt-16 h-[600px] flex flex-col items-center justify-center gap-4">
+    <header id="top" class="-mt-24 sm:-mt-16 h-[600px] flex flex-col text-center justify-center gap-4">
         <span class="text-xl">Hello! Welcome to my</span>
         <h1 class="drop-shadow-lg">Portfolio Page</h1>
     </header>
     <section id="about" class="flex items-center justify-center">
-        <div class="max-w-4xl w-full flex items-center gap-8">
+        <div class="max-w-4xl w-full flex flex-col sm:flex-row items-center gap-8">
             <div class="flex flex-col gap-6">
                 <h2>About me</h2>
                 <p>
@@ -77,18 +80,18 @@
     <section id="showcase" class="flex flex-col items-center justify-center gap-4 bg-neutral-100">
         <h2>Showcase</h2>
         <p>I have done lots of things.</p>
-        <div class="flex flex-wrap items-center justify-center gap-8 pt-8">
+        <div class="flex flex-wrap items-center justify-center gap-8 sm:pt-8">
             <div class="showcase-item">
-                <img src="./static/oph.jpg" class="max-w-[400px]">
+                <img src="./static/oph.jpg">
                 <p>I volunteered in faculty academic activities.</p>
             </div>
             <div class="showcase-item">
-                <img src="./static/award.jpg" class="max-w-[400px]">
+                <img src="./static/award.jpg">
                 <p>I did some hackathon and got award; obviously.</p>
             </div>
         </div>
     </section>
-    <footer id="contact" class="p-8 bg-neutral-800 text-white flex justify-between">
+    <footer id="contact" class="p-8 bg-neutral-800 text-white flex flex-wrap justify-between">
         <div class="space-y-2">
             <h3 class="font-bold text-2xl">Thank you</h3>
             <p>Feel free to contact me.</p>
